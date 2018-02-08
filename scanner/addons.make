@@ -1,0 +1,4 @@
+ofxMaxim
+ofxNetwork
+ofxOpenCv
+ofxSyphon
