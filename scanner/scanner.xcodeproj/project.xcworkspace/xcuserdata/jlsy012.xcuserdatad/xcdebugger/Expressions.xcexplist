@@ -11,6 +11,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "JLScanner::refresh():scanner.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "grayImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JLParticle::JLParticle(std::__1::vector&lt;ofVec3f, std::__1::allocator&lt;ofVec3f&gt; &gt;, int, int):particle.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "vertexList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "JLScanner::findContour():scanner.cpp">
          <PersistentStrings>
             <PersistentString
@@ -19,12 +35,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "JLScanner::refresh():scanner.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "grayImage">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "JLScanner::simpleApproxPolyDP(std::__1::vector&lt;ofVec3f, std::__1::allocator&lt;ofVec3f&gt; &gt; const&amp;, std::__1::vector&lt;ofVec3f, std::__1::allocator&lt;ofVec3f&gt; &gt;&amp;, ofVec3f, float):scanner.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

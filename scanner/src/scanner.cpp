@@ -97,7 +97,7 @@ void JLScanner::extractGraph()
     deviceImage->update();
 }
 
-void JLScanner::simpleApproxPolyDP(const vector<ofPoint>& contourIn, vector<ofPoint>& contourOut, float tolerance)
+void JLScanner::simpleApproxPolyDP(const vector<ofPoint>& contourIn, vector<ofPoint>& contourOut, ofPoint center , float tolerance)
 {
     int index;
     int numOfPoints;
@@ -135,8 +135,8 @@ void JLScanner::simpleApproxPolyDP(const vector<ofPoint>& contourIn, vector<ofPo
         pt = (CvPoint*)cvGetSeqElem(result, i);
 
         contourOut.push_back(ofPoint());
-        contourOut.back().x = (float)pt->x;
-        contourOut.back().y = (float)pt->y;
+        contourOut.back().x = (float)pt->x-center.x;
+        contourOut.back().y = (float)pt->y-center.y;
     }
     
     if( storage != NULL )
@@ -174,11 +174,12 @@ void JLScanner::findContour()
     {
         ofLog() << i << " , " << contourFinder->blobs[i].boundingRect.x  << " , " << contourFinder->blobs[i].boundingRect.y  << " , " << contourFinder->blobs[i].boundingRect.width  << " , " << contourFinder->blobs[i].boundingRect.height  << " , " << contourFinder->blobs[i].boundingRect.getArea();
     }
+    
+    centerGraph = contourFinder->blobs[0].centroid;
   
-    simpleApproxPolyDP(contourFinder->blobs[0].pts , graphPoints , 5);
+    simpleApproxPolyDP(contourFinder->blobs[0].pts , graphPoints , contourFinder->blobs[0].centroid,5);
     
     //https://bost.ocks.org/mike/simplify/0
-    
     
     for(ofPoint pos : graphPoints)
     {
@@ -213,17 +214,37 @@ void JLScanner::takeTicket()
     procFinalImage();
 }
 
-void JLScanner::refresh()
+vector<ofPoint> JLScanner::getVertex()
+{
+    return graphPoints;
+}
+
+void JLScanner::update()
+{
+    ;
+}
+
+void JLScanner::draw()
 {
     //deviceImage->draw(0,0);
     
-    grayImage->draw(0,0);
-    contourFinder->draw(0,0);
+    //grayImage->draw(0,0);
+    //contourFinder->draw(0,0);
+    
+    ofPushMatrix();
+    
+    ofTranslate(300, 300);
     
     for(ofPoint pos : graphPoints)
     {
         ofDrawEllipse(pos.x, pos.y, 10, 10);
     }
+    
+    ofDrawEllipse(0,0, 10, 10);
+    
+    ofPopMatrix();
+    
+    //
 }
 
 

@@ -43,9 +43,12 @@ private:
     ofxCvContourFinder *contourFinder;
     ofxCvGrayscaleImage *grayImage;
     vector<ofPoint> graphPoints;
+    ofPoint centerGraph;
     
     
     // public member property area //////////////////////////////////
+    
+    
     
     // private member method area ///////////////////////////////////
     
@@ -53,7 +56,8 @@ private:
     void checkCamera();
     void loadTestImage();
     void procFinalImage();
-    void simpleApproxPolyDP(const vector<ofPoint>& contourIn, vector<ofPoint>& contourOut, float tolerance);
+    void simpleApproxPolyDP(const vector<ofPoint>& contourIn, vector<ofPoint>& contourOut, ofPoint center , float tolerance);
+    
     
     // public member method area ////////////////////////////////////
     
@@ -61,10 +65,12 @@ public:
     
     JLScanner();
     ~JLScanner();
-    void refresh();
+    void update();
+    void draw();
     void takeTicket();
     void extractGraph();
     void findContour();
+    vector<ofPoint> getVertex();
     
     
     

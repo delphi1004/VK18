@@ -25,6 +25,8 @@
 
 #include "ofMain.h"
 #include "scanner.h"
+#include "global.h"
+#include "particlemanager.h"
 
 class ofApp : public ofBaseApp
 {
@@ -33,7 +35,10 @@ class ofApp : public ofBaseApp
     
 private:
     
+    
     JLScanner *myScanner;
+    
+    JLParticleManager *particleManager;
     
     // public member property area //////////////////////////////////
     

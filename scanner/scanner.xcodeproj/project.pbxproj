@@ -26,6 +26,9 @@
 		AE90DDC4F364175C4E00DE91 /* stb_vorbis.c in Sources */ = {isa = PBXBuildFile; fileRef = 58F39BD9AA68BA6CAFF078C3 /* stb_vorbis.c */; };
 		B0F765650557A0FDBC6E7F11 /* maxiAtoms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 679D5AD6E7755201EE1564B4 /* maxiAtoms.cpp */; };
 		B6AEAC50C11E57118118A10B /* ofxCvImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E55E1C76698C73A1485B5D7 /* ofxCvImage.cpp */; };
+		BC4F5A68203B4FF900FB585B /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC4F5A66203B4FF900FB585B /* particle.cpp */; };
+		BC4F5A6B203B54DE00FB585B /* particlemanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC4F5A69203B54DE00FB585B /* particlemanager.cpp */; };
+		BC4F5A6E203B581600FB585B /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC4F5A6C203B581600FB585B /* global.cpp */; };
 		BC6C3EA72039CFD2006D04F3 /* scanner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC6C3EA52039CFD2006D04F3 /* scanner.cpp */; };
 		BE54B780830C62B71724AFD9 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 024E50A195A38CDEA3EC390E /* ofxSyphonClient.mm */; };
 		D0A8FBA09785D8699A5D0C04 /* ofxCvGrayscaleImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 794638DF2AADAC41DAF83C51 /* ofxCvGrayscaleImage.cpp */; };
@@ -223,6 +226,12 @@
 		BA6245B17DCC1BD10A51D2BF /* flann.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = flann.hpp; path = ../../../../../../../../Documents/of_v0.9.8_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/flann/flann.hpp; sourceTree = SOURCE_ROOT; };
 		BBA3A7A6EA307F367F3854B9 /* maxiBark.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = maxiBark.cpp; path = ../../../../../../../../Documents/of_v0.9.8_osx_release/addons/ofxMaxim/libs/maxiBark.cpp; sourceTree = SOURCE_ROOT; };
 		BC3A337B36798C80165A6353 /* composite_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = composite_index.h; path = ../../../../../../../../Documents/of_v0.9.8_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/flann/composite_index.h; sourceTree = SOURCE_ROOT; };
+		BC4F5A66203B4FF900FB585B /* particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
+		BC4F5A67203B4FF900FB585B /* particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
+		BC4F5A69203B54DE00FB585B /* particlemanager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = particlemanager.cpp; sourceTree = "<group>"; };
+		BC4F5A6A203B54DE00FB585B /* particlemanager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = particlemanager.h; sourceTree = "<group>"; };
+		BC4F5A6C203B581600FB585B /* global.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
+		BC4F5A6D203B581600FB585B /* global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
 		BC6C3EA52039CFD2006D04F3 /* scanner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = scanner.cpp; sourceTree = "<group>"; };
 		BC6C3EA62039CFD2006D04F3 /* scanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scanner.h; sourceTree = "<group>"; };
 		BC6F5CB099133D7EAC55233D /* utility.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utility.hpp; path = ../../../../../../../../Documents/of_v0.9.8_osx_release/addons/ofxOpenCv/libs/opencv/include/opencv2/gpu/device/utility.hpp; sourceTree = SOURCE_ROOT; };
@@ -867,6 +876,12 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				BC6C3EA52039CFD2006D04F3 /* scanner.cpp */,
 				BC6C3EA62039CFD2006D04F3 /* scanner.h */,
+				BC4F5A66203B4FF900FB585B /* particle.cpp */,
+				BC4F5A67203B4FF900FB585B /* particle.h */,
+				BC4F5A69203B54DE00FB585B /* particlemanager.cpp */,
+				BC4F5A6A203B54DE00FB585B /* particlemanager.h */,
+				BC4F5A6C203B581600FB585B /* global.cpp */,
+				BC4F5A6D203B581600FB585B /* global.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -985,9 +1000,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4F5A6E203B581600FB585B /* global.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				D3A8A6F08E536535514CF209 /* maxiMFCC.cpp in Sources */,
+				BC4F5A6B203B54DE00FB585B /* particlemanager.cpp in Sources */,
 				06FB07DA734CCC804294EC29 /* fft.cpp in Sources */,
 				AE90DDC4F364175C4E00DE91 /* stb_vorbis.c in Sources */,
 				4595DE7EC182D5A4B398B166 /* maxiBark.cpp in Sources */,
@@ -1008,6 +1025,7 @@
 				BC6C3EA72039CFD2006D04F3 /* scanner.cpp in Sources */,
 				D0A8FBA09785D8699A5D0C04 /* ofxCvGrayscaleImage.cpp in Sources */,
 				45B00A91C93947F56115B875 /* ofxSyphonServer.mm in Sources */,
+				BC4F5A68203B4FF900FB585B /* particle.cpp in Sources */,
 				BE54B780830C62B71724AFD9 /* ofxSyphonClient.mm in Sources */,
 				94039F4054E103BC46B2A267 /* ofxSyphonServerDirectory.mm in Sources */,
 				857D79457452FFC3CCEDBFD7 /* SyphonNameboundClient.m in Sources */,

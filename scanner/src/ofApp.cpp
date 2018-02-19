@@ -10,8 +10,11 @@ void ofApp::initDefaultData()
     ofBackground(0);
     
     myScanner = new JLScanner();
+    particleManager = new JLParticleManager();
     
     myScanner->takeTicket();
+    
+    particleManager->addParticle(myScanner->getVertex());
 }
 
 
@@ -23,7 +26,11 @@ void ofApp::initDefaultData()
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-    ofSetWindowShape(497, 704); // just for test
+    ofSetWindowShape(1400, 900); // just for test
+    
+    JLGlob::shared()->scrWidth  = ofGetScreenWidth();
+    JLGlob::shared()->scrHeight = ofGetScreenHeight();
+    
     
     initDefaultData();
 }
@@ -31,14 +38,17 @@ void ofApp::setup()
 //--------------------------------------------------------------
 void ofApp::update()
 {
-
+    particleManager->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw()
 {
-    myScanner->refresh();
-
+    ofSetBackgroundColor(0, 0, 0);
+    
+    //myScanner->refresh();
+    
+    particleManager->draw();
 }
 
 
