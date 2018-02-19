@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "JLScanner::loadTestImage():scanner.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "deviceImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JLScanner::findContour():scanner.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "contourFinder">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JLScanner::refresh():scanner.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "grayImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

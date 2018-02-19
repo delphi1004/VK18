@@ -1,14 +1,18 @@
 #include "ofApp.h"
 
 
-// private member property area /////////////////////////////////
-
-// public member property area //////////////////////////////////
 
 // private member method area ///////////////////////////////////
 
 
-
+void ofApp::initDefaultData()
+{
+    ofBackground(0);
+    
+    myScanner = new JLScanner();
+    
+    myScanner->takeTicket();
+}
 
 
 
@@ -19,7 +23,9 @@
 //--------------------------------------------------------------
 void ofApp::setup()
 {
-
+    ofSetWindowShape(497, 704); // just for test
+    
+    initDefaultData();
 }
 
 //--------------------------------------------------------------
@@ -31,6 +37,7 @@ void ofApp::update()
 //--------------------------------------------------------------
 void ofApp::draw()
 {
+    myScanner->refresh();
 
 }
 

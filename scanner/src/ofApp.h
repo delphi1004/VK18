@@ -24,15 +24,22 @@
 #pragma once
 
 #include "ofMain.h"
+#include "scanner.h"
 
 class ofApp : public ofBaseApp
 {
     
     // private member property area /////////////////////////////////
     
+private:
+    
+    JLScanner *myScanner;
+    
     // public member property area //////////////////////////////////
     
     // private member method area ///////////////////////////////////
+    
+    void initDefaultData();
     
     // public member method area ////////////////////////////////////
     
